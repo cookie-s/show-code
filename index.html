@@ -8,7 +8,7 @@
             array.forEach(function(e) {
                 e = e.split('=');
                 if(['code', 'state'].includes(e[0])) {
-                    document.getElementById("code").innerText = e[1];
+                    document.getElementById(e[0]).innerText = e[1];
                 }
             });
         </script>
