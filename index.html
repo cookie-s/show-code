@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div id="code"></div>
+        <div id="state"></div>
+        <script>
+            let query = location.search.substring(1);
+            let array = query.split('&');
+            array.forEach(function(e) {
+                e = e.split('=');
+                if(['code', 'state'].includes(e[0])) {
+                    document.getElementById("code").innerText = e[1];
+                }
+            });
+        </script>
+    </body>
+</html>
